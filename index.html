@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArsBlog</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">Arseniy<span>Blog</span></a>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#portfolio">Портфолио</a></li>
+                    <li><a href="#about">Обо мне</a></li>
+                    <li><a href="#testimonials">Отзывы</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Стиль & Качество</h1>
+                <p>Самый модный парень на районе, у вас есть шанс приблизится к его крутости.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn">Обратиться</a>
+                    <a href="#portfolio" class="btn btn-outline">Портфолио</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Наши услуги</h2>
+                <p>Мы предлагаем широкий спектр медиа услуг, которые помогут вашему бизнесу процветать в условиях жесткой конкуренции на рынке.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('Реклама.JPG');"></div>
+                    <div class="service-content">
+                        <h3>Реклама</h3>
+                        <p>Создаем эффективные рекламные интеграции, которые органично вписываются в ваш контент и вызывают искренний интерес у аудитории.</p>
+                        <a href="#contact" class="service-link">Заказать <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('Съёмка1.PNG');"></div>
+                    <div class="service-content">
+                        <h3>Съёмка</h3>
+                        <p>Профессиальные видео для блога любого формата — от динамичных влогов до качественных продакшен-съемок с идеальной картинкой.</p>
+                        <a href="#contact" class="service-link">Заказать <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('Монтаж1.JPG');"></div>
+                    <div class="service-content">
+                        <h3>Монтаж</h3>
+                        <p>Превращаем сырые материалы в увлекательные истории с четкой структурой, плавными переходами и захватывающим темпом.</p>
+                        <a href="#contact" class="service-link">Заказать<i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-title">
+                <h2>Портфолио</h2>
+                <p>Взгляните на некоторые из наших последних проектов.</p>
+            </div>
+            <div class="portfolio-filters">
+                <button class="filter-btn active">Всё</button>
+                <button class="filter-btn">Реклама</button>
+                <button class="filter-btn">Съёмка</button>
+                <button class="filter-btn">Монтаж</button>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" style="background-image: url('Мороженое.jpg');">
+                    <div class="portfolio-overlay">
+                        <h3>Мороженое Felin</h3>
+                        <p>Арсений снял честный видео-обзор на ваше мороженое — и его реакция в кадре ценнее любой рекламы! Когда эксперт так эмоционально хвалит ваш продукт — это моментально вызывает доверие и желание попробовать.</p>
+                        <a href="#" class="btn">Посмотреть проект</a>
+                    </div>
+                </div>
+                <div class="portfolio-item" style="background-image: url('Съёмка.PNG');">
+                    <div class="portfolio-overlay">
+                        <h3>Профессиональная съемка</h3>
+                        <p>Так чувствовать кадр может не каждый.</p>
+                        <a href="#" class="btn">Посмотреть проект</a>
+                    </div>
+                </div>
+                <div class="portfolio-item" style="background-image: url('Монтаж.PNG');">
+                    <div class="portfolio-overlay">
+                        <h3>Монтаж для ...</h3>
+                        <p>Заказчик остался доволен.</p>
+                        <a href="#" class="btn">Посмотреть проект</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Об Арсении</h2>
+                    
+                    <p>С малых лет, этот парень интересуется съёмками, обзорами и монтажём видео для блога, число его подписчиков растёт всё больше и больше с каждым днём.</p>
+                    <p>Любимый его праздник - Новый Год, ближе к 01.01.2026 ждите пополнение новогодним контентом!</p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">250+</div>
+                            <div class="stat-text">Успешных видео</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">98%</div>
+                            <div class="stat-text">Довольных клиентов</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-text">Эффектных монтажей</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">6+</div>
+                            <div class="stat-text">Лет опыта</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src ="photo_2025-11-25_17-01-57.jpg" alt="Обо мне">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Что говорят наши клиенты</h2>
+                <p>Не верьте нам на слово - выслушайте мнение наших довольных клиентов.</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-item">
+                    <div class="testimonial-text">
+                        "Сотрудничество с ArsBlog принесло огромную популярность нашему каналу. Его внимание к деталям и творческий подход помогли нам определить рекламное направление, которое действительно отражает нашу сущность".
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="Виктория.jpg" alt="Виктория Агеявич">
+                        </div>
+                        <div class="author-info">
+                            <h4>Виктория Агеявич</h4>
+                            <p>Милашка-скромняшка</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Будь на связи</h2>
+                <p>Готовы вывести свой бренд на новый уровень? Свяжитесь с нами сегодня для получения бесплатной консультации.</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Давайте начнём сотрудничество</h3>
+                    <p>Мы будем рады услышать о вашем проекте и обсудить, как мы можем помочь воплотить ваше видение в жизнь.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Наше местоположение</h4>
+                                <p>г. Горки, а больше вам и не нужно ;)</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Телефон</h4>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p>hello@ArsBlog.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <input type="text" placeholder="Ваше Имя" required>
+                        <input type="email" placeholder="Ваш Email" required>
+                        <input type="text" placeholder="Тема">
+                        <textarea placeholder="Ваше Сообщение" required></textarea>
+                        <button type="submit" class="btn">Отправить сообщение</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>ArsBlog</h4>
+                    <p>Мы создаем потрясающие видео, которые помогают компаниям выделяться и устанавливать контакт со своей аудиторией.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Быстрые ссылки</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#services">Услуги</a></li>
+                        <li><a href="#portfolio">Портфолио</a></li>
+                        <li><a href="#about">Обо мне</a></li>
+                        <li><a href="#contact">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Услуги</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Реклама</a></li>
+                        <li><a href="#">Съёмка</a></li>
+                        <li><a href="#">Монтаж</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Новостная рассылка</h4>
+                    <p>Подпишись на нашу новостную рассылку, чтобы не пропустить новые проекты и выгодные предложения!</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Ваш Email" required>
+                        <button type="submit" class="btn">Подписаться</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ArsBlog. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
