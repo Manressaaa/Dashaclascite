@@ -1,4 +1,3 @@
-
 const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
 const navMenu = document.querySelector('nav ul');
 
@@ -60,3 +59,32 @@ if (newsletterForm) {
         this.reset();
     });
 }
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = targetId === '#top' 
+            ? document.body 
+            : document.querySelector(targetId);
+        
+        if (targetElement) {
+            
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+
+            if (window.innerWidth <= 768) {
+                const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+                const nav = document.querySelector('nav');
+                nav.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        }
+    });
+});
+
