@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ArsBlog</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -88,14 +89,14 @@
              
             </div>
             <div class="portfolio-grid">
-                <div class="portfolio-item" style="background-image: url('Мороженое.jpg');">
+                <div class="portfolio-item" style="background-image: url('Мороженое.PNG');">
                     <div class="portfolio-overlay">
                         <h3>Мороженое Felin</h3>
                         <p>Арсений снял видео-обзор на мороженое — и его реакция в кадре ценнее любой рекламы! Когда эксперт так эмоционально хвалит продукт — это моментально вызывает желание попробовать.</p>
                         <button class="btn" onclick="window.open('Мороженое.mp4', '_blank')">Посмотреть проект</button>
                     </div>
                 </div>
-                <div class="portfolio-item" style="background-image: url('Съёмка.PNG');">
+                <div class="portfolio-item" style="background-image: url('Съёмка2.PNG');">
                     <div class="portfolio-overlay">
                         <h3>Профессиональная съемка</h3>
                         <p>Так чувствовать кадр может не каждый. Окончил непрофессиональные курсы по видеосъёмке и тик-ток. Сразу после первого просмотра понимаешь, что настолько круто у тебя никогда не получится.</p>
@@ -148,31 +149,79 @@
         </div>
     </section>
 
-    <!-- Отзыв вика -->
+    <!-- Отзывы -->
     <section class="testimonials" id="testimonials">
-        <div class="container">
-            <div class="section-title">
-                <h2>Что говорят наши клиенты</h2>
-                <p>Не верьте нам на слово - выслушайте мнение наших довольных клиентов.</p>
-            </div>
-            <div class="testimonials-slider">
-                <div class="testimonial-item">
-                    <div class="testimonial-text">
-                        "Сотрудничество с ArsBlog принесло огромную популярность нашему каналу. Его внимание к деталям и творческий подход помогли нам определить рекламное направление, которое действительно отражает нашу сущность. Люблю его!".
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-img">
-                            <img src="Виктория.jpg" alt="Виктория Агеявич">
-                        </div>
-                        <div class="author-info">
-                            <h4>Виктория Агеявич</h4>
-                            <p>Милашка-скромняшка</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <div class="container">
+    <div class="section-title">
+      <h2>Что говорят наши клиенты</h2>
+      <p>Не верьте нам на слово - выслушайте мнение наших довольных клиентов.</p>
+    </div>
+    <div class="testimonials-slider">
+        
+      <!-- Отзыв вика -->
+      <div class="testimonial-item active">
+        <div class="testimonial-text">
+          "Сотрудничество с ArsBlog принесло огромную популярность моему каналу. 100/10"
         </div>
-    </section>
+        <div class="testimonial-author">
+          <div class="author-img">
+            <img src="Виктория.jpg" alt="Виктория Агеявич">
+          </div>
+          <div class="author-info">
+            <h4>Виктория Агеявич</h4>
+            <p>Милашка-скромняшка</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Отзыв даша -->
+      <div class="testimonial-item">
+        <div class="testimonial-text">
+          "Работа с ArsBlog помогла нам увеличить продажи. Команда всегда на связи и готова помочь."
+        </div>
+        <div class="testimonial-author">
+          <div class="author-img">
+            <img src="Даша.jpg" alt="Дашулик">
+          </div>
+          <div class="author-info">
+            <h4>Дашулик Васильева</h4>
+            <p>Блогер</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Отзыв лиза -->
+      <div class="testimonial-item">
+        <div class="testimonial-text">
+          "Арсений вдохновил меня на новые проекты. Креативность и профессионализм — на высшем уровне!"
+        </div>
+        <div class="testimonial-author">
+          <div class="author-img">
+            <img src="Лиза.jpg" alt="Лисавета">
+          </div>
+          <div class="author-info">
+            <h4>Лисавета Хмурович</h4>
+            <p>Маркетолог</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<div class="slider-arrows">
+  <span class="arrow prev">&#10094;</span>
+  <span class="arrow next">&#10095;</span>
+</div>
+
+
+    <!-- Навигация -->
+    <div class="slider-nav">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+</section>
+
 
     <!-- Тут контакты -->
     <section class="contact" id="contact">
