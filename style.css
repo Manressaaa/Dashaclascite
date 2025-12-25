@@ -172,11 +172,10 @@ nav ul li a:hover {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: box-shadow 0.3s ease;
 }
 
 .service-card:hover {
-    transform: translateY(-10px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
@@ -217,6 +216,7 @@ nav ul li a:hover {
 .service-link:hover i {
     transform: translateX(5px);
 }
+
 
 /* Портфолио */
 .portfolio {
@@ -345,13 +345,44 @@ nav ul li a:hover {
 }
 
 .testimonials-slider {
-    max-width: 800px;
-    margin: 0 auto;
+  position: relative; 
+  overflow: hidden;
 }
 
-.testimonial-item {
-    padding: 0 20px;
+.slider-arrows {
+  text-align: center;
+  margin-top: 10px;
 }
+
+.arrow {
+  cursor: pointer;
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 15px;
+  transition: color 0.3s;
+  user-select: none;
+}
+
+.arrow:hover {
+  color: #e74c3c;
+}
+
+
+/* Слайды */
+.testimonial-item {
+  display: none;
+  animation: fade 0.8s ease;
+}
+
+.testimonial-item.active {
+  display: block;
+}
+
+@keyframes fade {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
 
 .testimonial-text {
     font-size: 1.2rem;
@@ -389,6 +420,47 @@ nav ul li a:hover {
     color: #bdc3c7;
     font-size: 0.9rem;
 }
+
+.testimonials-slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-item {
+  display: none;
+  animation: fade 0.8s ease;
+}
+
+.testimonial-item.active {
+  display: block;
+}
+
+@keyframes fade {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* Навигация */
+.slider-nav {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.slider-nav .dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.slider-nav .dot.active {
+  background-color: #e74c3c;
+}
+
 
 /* контакты */
 .contact {
