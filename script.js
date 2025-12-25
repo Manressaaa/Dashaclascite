@@ -1,3 +1,4 @@
+// ===== Мобильное меню =====
 const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
 const navMenu = document.querySelector('nav ul');
 
@@ -5,25 +6,20 @@ mobileMenuBtn.addEventListener('click', () => {
     navMenu.classList.toggle('show');
 });
 
-
+// ===== Фильтр кнопки =====
 const filterBtns = document.querySelectorAll('.filter-btn');
-
 filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-        
         filterBtns.forEach(b => b.classList.remove('active'));
-     
         btn.classList.add('active');
-
         alert(`Filtering by: ${btn.textContent}`);
     });
 });
 
-
+// ===== Плавный скролл =====
 document.querySelectorAll('nav a, .hero-buttons a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
-        
         const targetId = this.getAttribute('href');
         if(targetId.startsWith('#')) {
             const targetElement = document.querySelector(targetId);
@@ -32,15 +28,13 @@ document.querySelectorAll('nav a, .hero-buttons a').forEach(anchor => {
                     top: targetElement.offsetTop - 80,
                     behavior: 'smooth'
                 });
-                
-
                 navMenu.classList.remove('show');
             }
         }
     });
 });
 
-
+// ===== Формы =====
 const contactForm = document.querySelector('.contact-form form');
 const newsletterForm = document.querySelector('.newsletter-form');
 
@@ -60,26 +54,16 @@ if (newsletterForm) {
     });
 }
 
+// ===== Дополнительный плавный скролл =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        
         const targetId = this.getAttribute('href');
         if (targetId === '#') return;
-        
-        const targetElement = targetId === '#top' 
-            ? document.body 
-            : document.querySelector(targetId);
-        
+        const targetElement = targetId === '#top' ? document.body : document.querySelector(targetId);
         if (targetElement) {
-            
-            targetElement.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-
+            targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
             if (window.innerWidth <= 768) {
-                const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
                 const nav = document.querySelector('nav');
                 nav.classList.remove('active');
                 mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
@@ -88,6 +72,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// ===== Слайдер отзывов =====
 $(document).ready(function() {
   let currentIndex = 0;
   const items = $(".testimonial-item");
@@ -96,46 +81,49 @@ $(document).ready(function() {
   function showSlide(index) {
     items.removeClass("active").eq(index).addClass("active");
     dots.removeClass("active").eq(index).addClass("active");
+    currentIndex = index;
   }
 
+  function showNextSlide() {
+    currentIndex = (currentIndex + 1) % items.length;
+    showSlide(currentIndex);
+  }
+
+  function showPrevSlide() {
+    currentIndex = (currentIndex - 1 + items.length) % items.length;
+    showSlide(currentIndex);
+  }
+
+  // точки
   dots.on("click", function() {
     currentIndex = $(this).index();
     showSlide(currentIndex);
   });
 
-  $(".arrow.prev").on("click", function() {
-    currentIndex = (currentIndex - 1 + items.length) % items.length;
-    showSlide(currentIndex);
+  // стрелки
+  $(".arrow.prev").on("click", showPrevSlide);
+  $(".arrow.next").on("click", showNextSlide);
+
+  // автопрокрутка
+  setInterval(showNextSlide, 5000);
+
+  // свайпы для телефона
+  const slider = document.querySelector('.testimonials-slider');
+  let startX = 0;
+
+  slider.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
   });
 
-  $(".arrow.next").on("click", function() {
-    currentIndex = (currentIndex + 1) % items.length;
-    showSlide(currentIndex);
+  slider.addEventListener('touchend', (e) => {
+    let endX = e.changedTouches[0].clientX;
+    if (endX < startX - 50) {
+      showNextSlide();
+    } else if (endX > startX + 50) {
+      showPrevSlide();
+    }
   });
 
-  setInterval(function() {
-    currentIndex = (currentIndex + 1) % items.length;
-    showSlide(currentIndex);
-  }, 5000);
-
+  // стартовый слайд
   showSlide(currentIndex);
 });
-const slider = document.querySelector('.testimonials-slider');
-let startX = 0;
-
-slider.addEventListener('touchstart', (e) => {
-  startX = e.touches[0].clientX;
-});
-
-slider.addEventListener('touchend', (e) => {
-  let endX = e.changedTouches[0].clientX;
-  if (endX < startX - 50) {
-    // свайп влево → следующий слайд
-    showNextSlide();
-  } else if (endX > startX + 50) {
-    // свайп вправо → предыдущий слайд
-    showPrevSlide();
-  }
-});
-
-
