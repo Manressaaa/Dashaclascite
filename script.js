@@ -1,4 +1,4 @@
-// ===== Мобильное меню =====
+
 const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
 const navMenu = document.querySelector('nav ul');
 
@@ -6,7 +6,7 @@ mobileMenuBtn.addEventListener('click', () => {
     navMenu.classList.toggle('show');
 });
 
-// ===== Фильтр кнопки =====
+
 const filterBtns = document.querySelectorAll('.filter-btn');
 filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -16,7 +16,7 @@ filterBtns.forEach(btn => {
     });
 });
 
-// ===== Плавный скролл =====
+
 document.querySelectorAll('nav a, .hero-buttons a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -34,7 +34,7 @@ document.querySelectorAll('nav a, .hero-buttons a').forEach(anchor => {
     });
 });
 
-// ===== Формы =====
+
 const contactForm = document.querySelector('.contact-form form');
 const newsletterForm = document.querySelector('.newsletter-form');
 
@@ -54,7 +54,7 @@ if (newsletterForm) {
     });
 }
 
-// ===== Дополнительный плавный скролл =====
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -72,7 +72,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// ===== Слайдер отзывов =====
+
 $(document).ready(function() {
   let currentIndex = 0;
   const items = $(".testimonial-item");
