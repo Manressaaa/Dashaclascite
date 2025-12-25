@@ -120,6 +120,22 @@ $(document).ready(function() {
 
   showSlide(currentIndex);
 });
+const slider = document.querySelector('.testimonials-slider');
+let startX = 0;
 
+slider.addEventListener('touchstart', (e) => {
+  startX = e.touches[0].clientX;
+});
+
+slider.addEventListener('touchend', (e) => {
+  let endX = e.changedTouches[0].clientX;
+  if (endX < startX - 50) {
+    // свайп влево → следующий слайд
+    showNextSlide();
+  } else if (endX > startX + 50) {
+    // свайп вправо → предыдущий слайд
+    showPrevSlide();
+  }
+});
 
 
