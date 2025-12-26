@@ -42,7 +42,6 @@ if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
       
         alert('Спасибо за ваше сообщение! Наш менеджер скоро свяжется с вами.');
-        this.reset();
     });
 }
 
