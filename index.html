@@ -223,65 +223,71 @@
 </section>
 
 
-    <!-- Тут контакты -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>Будь на связи</h2>
-                <p>Готовы вывести свой бренд на новый уровень? Свяжитесь с нами сегодня для получения бесплатной консультации.</p>
+<!-- Тут контакты -->
+<section class="contact" id="contact">
+    <div class="container">
+        <div class="section-title">
+            <h2>Будь на связи</h2>
+            <p>Готовы вывести свой бренд на новый уровень? Свяжитесь с нами сегодня для получения бесплатной консультации.</p>
+        </div>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Давайте начнём сотрудничество</h3>
+                <p>Мы будем рады услышать о вашем проекте и обсудить, как мы можем помочь воплотить ваше видение в жизнь.</p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Наше местоположение</h4>
+                            <p>г. Горки, а больше вам и не нужно ;)</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Телефон</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Email</h4>
+                            <p>hello@ArsBlog.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="http://t.me/ddddd5dddd"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/manressaaa?igsh=MTBvN2p6anFpOXl6aQ%3D%3D&utm_source=qr"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/manressaaa?igsh=MTBvN2p6anFpOXl6aQ%3D%3D&utm_source=qr"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/manressaaa?igsh=MTBvN2p6anFpOXl6aQ%3D%3D&utm_source=qr"><i class="fab fa-linkedin-in"></i></a>
+                </div>
             </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Давайте начнём сотрудничество</h3>
-                    <p>Мы будем рады услышать о вашем проекте и обсудить, как мы можем помочь воплотить ваше видение в жизнь.</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h4>Наше местоположение</h4>
-                                <p>г. Горки, а больше вам и не нужно ;)</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h4>Телефон</h4>
-                                <p>+1 (555) 123-4567</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h4>Email</h4>
-                                <p>hello@ArsBlog.com</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="social-links">
-                        <a href="http://t.me/ddddd5dddd"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/manressaaa?igsh=MTBvN2p6anFpOXl6aQ%3D%3D&utm_source=qr"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/manressaaa?igsh=MTBvN2p6anFpOXl6aQ%3D%3D&utm_source=qr"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.instagram.com/manressaaa?igsh=MTBvN2p6anFpOXl6aQ%3D%3D&utm_source=qr"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form>
-                        <input type="text" placeholder="Ваше Имя" required>
-                        <input type="email" placeholder="Ваш Email" required>
-                        <input type="text" placeholder="Тема">
-                        <textarea placeholder="Ваше Сообщение" required></textarea>
-                        <button type="submit" class="btn">Отправить сообщение</button>
-                    </form>
-                </div>
+            <div class="contact-form">
+                <!-- Форма с getform.io -->
+                <form action="https://getform.io/f/ajjdomja" method="POST">
+                    <input type="text" name="name" placeholder="Ваше Имя" required>
+                    <input type="email" name="email" placeholder="Ваш Email" required>
+                    <input type="text" name="subject" placeholder="Тема">
+                    <textarea name="message" placeholder="Ваше Сообщение" required></textarea>
+                    
+                    <!-- Дополнительно можно скрыто передавать данные -->
+                    <input type="hidden" name="source" value="contact-section">
+
+                    <button type="submit" class="btn">Отправить сообщение</button>
+                </form>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- Футер -->
     <footer>
