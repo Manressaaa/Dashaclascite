@@ -104,7 +104,7 @@ $(document).ready(function() {
   $(".arrow.next").on("click", showNextSlide);
 
   // автопрокрутка
-  setInterval(showNextSlide, 5000);
+  setInterval(showNextSlide, 10000);
 
   // свайпы для телефона
   const slider = document.querySelector('.testimonials-slider');
