@@ -40,7 +40,7 @@ const newsletterForm = document.querySelector('.newsletter-form');
 
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
+      
         alert('Спасибо за ваше сообщение! Наш менеджер скоро свяжется с вами.');
         this.reset();
     });
