@@ -365,7 +365,7 @@ nav ul li a:hover {
 
 .testimonial-item {
     display: none;
-    animation: fade 0.8s ease;
+    animation: fade 2s ease;
 }
 
 .testimonial-item.active {
